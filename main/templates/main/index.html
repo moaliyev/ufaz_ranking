@@ -5,7 +5,7 @@
 {% if not isVisited %}
 <dialog id="dialog" class="dialog">
   <div class="dialog-container">
-    <img src="{% static 'images/sabina.png' %}" alt="sen aglion">
+    <img src="{% static 'images/file.jpg' %}" alt="sen aglion">
     <div class="dialog-cloud">
       <div class="dialog-cloud-text-container">
         <p class="dialog-cloud-text" id="dialog-text">Hi Ugazien</p>
@@ -13,6 +13,7 @@
     </div>
   </div>
 </dialog>
+<audio src="{% static 'audios/mental.mp4' %}" id="mentalIllnessSound"></audio>
 {% endif %}
 <div
   class="container pt-3 d-flex justify-content-center flex-column align-items-center"
@@ -35,6 +36,10 @@
 <div class="mt-5 container pt-3 d-flex justify-content-center flex-column align-items-center">
   <h3>Useless useful tools</h3>
   <a class="navbar-brand btn btn-info" href="{% url 'gpa' %}">GPA CALCULATOR</a>
+</div>
+
+<div class="empty hide" id="empty">
+    <video src="{% static 'videos/damn.mp4' %}" class="damn-moves" id="video"></video>
 </div>
 <script src="{% static 'js/index.js' %}"></script>
 {% endblock %}

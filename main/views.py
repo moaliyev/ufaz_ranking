@@ -6,7 +6,7 @@ from django.http import HttpResponseNotFound
 
 
 def index(request):
-    is_visited = True
+    is_visited = False
     if not request.session.exists(request.session.session_key):
         is_visited = False
     request.session.create()
