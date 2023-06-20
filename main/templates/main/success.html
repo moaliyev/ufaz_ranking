@@ -1,0 +1,17 @@
+{% extends "base.html" %} {% load static %} {% block header %}
+<title>UwU</title>
+<link rel="stylesheet" href="{% static 'css/success.css' %}" />
+
+{% endblock %} {% block content %}
+<div class="custom-container">
+  <img src="{% static 'images/kawaii.gif' %}" alt="kawaii" />
+  <img src="{% static 'images/test.gif' %}" alt="kawaii" />
+  <img
+    src="{% static 'images/ruka-sarashina-rent-a-girlfriend.gif' %}"
+    alt="kawaii"
+  />
+  <img src="{% static 'images/kiss.gif' %}" alt="kawaii" />
+  <img src="{% static 'images/miracle-nikki-hearts.gif' %}" alt="kawaii" />
+</div>
+<script src="{% static 'js/success.js' %}"></script>
+{% endblock %}

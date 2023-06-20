@@ -1,0 +1,37 @@
+{% extends "base.html" %} {% load static %} {% block header %}
+<title>Donate</title>
+<link rel="stylesheet" href="{% static 'css/donate.css' %}" />
+{% endblock %} {% block content %}
+<div class="custom-form-container">
+  <img src="{% static 'images/uwu.png' %}" alt="UwU" />
+  <div>
+    <h3>Kredi Kartı bilgilerini g-görmeme izin v-verir misin?</h3>
+    <form method="post">
+      {% csrf_token %}
+      <label for="card-number">kredi kartındakı numarayı yazar mısın :3</label>
+      <input
+        type="text"
+        placeholder="✍️(◔◡◔)"
+        name="card-number"
+        id="card-number"
+      />
+      <label for="card-date">Süresi ne zaman bitiyor owo</label>
+      <input
+        type="text"
+        placeholder="✍️(◔◡◔)"
+        name="card-date"
+        id="card-date"
+      />
+      <label for="card-cvv"
+        >arkadakı numaralar... ne yazıyo ? okuyamıyorum :(</label
+      >
+      <input type="text" placeholder="✍️(◔◡◔)" name="card-cvv" id="card-cvv" />
+      <button>arigatou senpai!</button>
+    </form>
+  </div>
+</div>
+<audio id="audio" src="{% static 'audios/arigataou.mp4' %}" autoplay></audio>
+
+<script src="{% static 'js/donate.js' %}"></script>
+
+{% endblock %}

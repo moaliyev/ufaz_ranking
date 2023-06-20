@@ -1,0 +1,40 @@
+{% extends "base.html" %} {% load static %} {% block header %}
+<title>UFAZ Ranking - Home</title>
+<link rel="stylesheet" href="{% static 'css/index.css' %}">
+{% endblock %} {% block content %}
+{% if not isVisited %}
+<dialog id="dialog" class="dialog">
+  <div class="dialog-container">
+    <img src="{% static 'images/sabina.png' %}" alt="sen aglion">
+    <div class="dialog-cloud">
+      <div class="dialog-cloud-text-container">
+        <p class="dialog-cloud-text" id="dialog-text">Hi Ugazien</p>
+      </div>
+    </div>
+  </div>
+</dialog>
+{% endif %}
+<div
+  class="container pt-3 d-flex justify-content-center flex-column align-items-center"
+>
+  <h1 class="mb-5">Hi Average Ugazien</h1>
+  <h3>Ranking</h3>
+  <nav class="d-flex justify-content-center flex-wrap">
+      {% for major in majors %}
+        <a class="navbar-brand btn btn-danger mb-2 mt-2 " href="{% url 'major' major.id %}"
+          >{{ major }}</a
+        >
+        {% endfor %}
+        <a class="navbar-brand btn btn-danger mb-2 mt-2 " href="{% url 'major_all' %}"
+          >All</a>
+      
+    </ul>
+  </nav>
+</div>
+
+<div class="mt-5 container pt-3 d-flex justify-content-center flex-column align-items-center">
+  <h3>Useless useful tools</h3>
+  <a class="navbar-brand btn btn-info" href="{% url 'gpa' %}">GPA CALCULATOR</a>
+</div>
+<script src="{% static 'js/index.js' %}"></script>
+{% endblock %}
